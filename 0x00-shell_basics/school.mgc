@@ -1,2 +1,2 @@
 #!/bin/bash
-chod
+file --magic-file=school.mgc School
