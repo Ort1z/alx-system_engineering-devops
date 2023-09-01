@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugo+X ./*
+sudo chmod -R a+x current_dir=$(pwd)
