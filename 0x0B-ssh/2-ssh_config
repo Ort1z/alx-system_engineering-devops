@@ -1,4 +1,4 @@
 # school server config options
 Host 3.85.1.135
     IdentityFile ~/.ssh/school
-    Protocol 2
+    PasswordAuthentication no
