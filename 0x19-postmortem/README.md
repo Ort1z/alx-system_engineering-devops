@@ -1,85 +1,43 @@
-0x19. Postmortem
-DevOps
-SysAdmin
- Weight: 1
- Project will start Aug 12, 2024 6:00 AM, must end by Aug 19, 2024 6:00 AM
- Manual QA review must be done (request it when you are done with the project)
-Concepts
-For this project, we expect you to look at this concept:
+# The Great Cookie Crumble: A Web Service Postmortem
 
-On-call
-Background Context
+## Issue Summary
+- **Duration**: 2 hours and 37 minutes, from 14:23 to 17:00 UTC on August 15, 2024
+- **Impact**: Our cookie-based authentication service went down faster than a house of cards in a tornado. 73% of users were left crumbless, unable to access their accounts or place orders for our delicious virtual cookies.
+- **Root Cause**: A half-baked deployment of a new feature caused our cookie jar to overflow, resulting in a system-wide indigestion.
 
+## Timeline
+- **14:23 UTC**: Our monitoring system burped, alerting us that something was cooking... and not in a good way.
+- **14:25 UTC**: Our on-call engineer, Bob "Cookie Monster" Smith, received the alert while in a heated debate about chocolate chip vs. oatmeal raisin.
+- **14:30 UTC**: Initial investigation revealed that user authentication was failing faster than a soufflé in an earthquake.
+- **14:45 UTC**: Assumed the issue was related to the recent database upgrade. Spent 30 minutes trying to roll back the changes, but no dice.
+- **15:15 UTC**: Escalated to the senior engineering team, who were in the middle of a fierce cookie decorating contest.
+- **15:30 UTC**: Senior team identified the real culprit: a new feature deployment that was eating up more resources than a hungry teenager.
+- **16:45 UTC**: Rolled back the half-baked feature deployment, watched anxiously as the system slowly came back to life.
+- **17:00 UTC**: Service fully restored. Collective sigh of relief heard across three time zones.
 
-Any software system will eventually fail, and that failure can come stem from a wide range of possible factors: bugs, traffic spikes, security issues, hardware failures, natural disasters, human error… Failing is normal and failing is actually a great opportunity to learn and improve. Any great Software Engineer must learn from his/her mistakes to make sure that they won’t happen again. Failing is fine, but failing twice because of the same issue is not.
+## Root Cause and Resolution
+The root cause was a new feature that was supposed to improve our cookie customization options. However, it had a bug that caused it to create infinite loops of cookie requests, consuming more server resources than Augustus Gloop at Willy Wonka's chocolate factory.
 
-A postmortem is a tool widely used in the tech industry. After any outage, the team(s) in charge of the system will write a summary that has 2 main goals:
+We resolved the issue by rolling back the deployment and putting the feature on a strict diet of optimizations and rigorous testing before allowing it back into production.
 
-To provide the rest of the company’s employees easy access to information detailing the cause of the outage. Often outages can have a huge impact on a company, so managers and executives have to understand what happened and how it will impact their work.
-And to ensure that the root cause(s) of the outage has been discovered and that measures are taken to make sure it will be fixed.
-Resources
-Read or watch:
+## Corrective and Preventative Measures
+To prevent future cookie catastrophes, we're implementing the following measures:
 
-Incident Report, also referred to as a Postmortem
-The importance of an incident postmortem process
-What is an Incident Postmortem?
-More Info
-Manual QA Review
-It is your responsibility to request a review for your postmortem from a peer before the project’s deadline. If no peers have been reviewed, you should request a review from a TA or staff member.
+1. **Improve our deployment process:**
+   - Implement a phased rollout strategy for new features
+   - Enhance pre-deployment testing, including stress tests
+   - Set up a "canary" deployment system to catch issues before they affect all users
 
-Tasks
-0. My first postmortem
-mandatory
+2. **Upgrade our monitoring system:**
+   - Add more granular alerts for resource usage spikes
+   - Implement better logging for easier debugging
 
+3. **Enhance our incident response:**
+   - Create a clear escalation policy
+   - Conduct regular "fire drills" to practice handling outages
 
-Using one of the web stack debugging project issue or an outage you have personally face, write a postmortem. Most of you will never have faced an outage, so just get creative and invent your own :)
-
-Requirements:
-
-Issue Summary (that is often what executives will read) must contain:
-duration of the outage with start and end times (including timezone)
-what was the impact (what service was down/slow? What were user experiencing? How many % of the users were affected?)
-what was the root cause
-Timeline (format bullet point, format: time - keep it short, 1 or 2 sentences) must contain:
-
-when was the issue detected
-how was the issue detected (monitoring alert, an engineer noticed something, a customer complained…)
-actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
-misleading investigation/debugging paths that were taken
-which team/individuals was the incident escalated to
-how the incident was resolved
-Root cause and resolution must contain:
-
-explain in detail what was causing the issue
-explain in detail how the issue was fixed
-Corrective and preventative measures must contain:
-
-what are the things that can be improved/fixed (broadly speaking)
-a list of tasks to address the issue (be very specific, like a TODO, example: patch Nginx server, add monitoring on server memory…)
-Be brief and straight to the point, between 400 to 600 words
-
-While postmortem format can vary, stick to this one so that you can get properly reviewed by your peers.
-
-Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
-
-Add URLs here:
-Repo:
-
-GitHub repository: alx-system_engineering-devops
-Directory: 0x19-postmortem
-File: README.md
-1. Make people want to read your postmortem
-#advanced
-We are constantly stormed by a quantity of information, it’s tough to get people to read you.
-
-Make your post-mortem attractive by adding humour, a pretty diagram or anything that would catch your audience attention.
-
-Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
-
-Add URLs here:
-Repo:
-
-GitHub repository: alx-system_engineering-devops
-Directory: 0x19-postmortem
-File: README.md
-
+4. **Specific TODOs:**
+   - Optimize the cookie customization feature code
+   - Add rate limiting to prevent resource overconsumption
+   - Increase server capacity to handle traffic spikes
+   - Update our incident response playbook
