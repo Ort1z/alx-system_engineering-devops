@@ -1,10 +1,17 @@
-# Increase the ULIMIT for the Nginx service
+# This Puppet script configures Nginx to handle high concurrency efficiently
 
-# Increase the ULIMIT in the default Nginx config
-exec { 'fix--for-nginx':
-  command => 'sed -i "s/15/4096/" /etc/default/nginx',
-  path    => '/usr/local/bin/:/bin/'
+file { '/etc/nginx/nginx.conf':
+  ensure  => file,
+  content => template('nginx/nginx.conf.erb'),
+  notify  => Service['nginx'],
 }
+
+service { 'nginx':
+  ensure    => running,
+  enable    => true,
+  subscribe => File['/etc/nginx/nginx.conf'],
+}
+
 
 # Restart Nginx
 exec { 'nginx-restart':
