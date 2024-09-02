@@ -52,7 +52,7 @@ To avoid future cookie catastrophes, we're implementing the following measures:
 
 Below is a whimsical diagram that illustrates how the cookie crumble unfolded:
 
-![Cookie Crumble Diagram](https://via.placeholder.com/800x400.png?text=Cookie+Crumble+Diagram) <!-- Replace with actual diagram URL -->
+![Cookie Crumble Diagram](https://github.com/Ort1z/alx-system_engineering-devops/blob/d302fde5eda46a3cc00861d4c6d6d18d1c3ca858/0x19-postmortem/pics/cp.jpg) <!-- Replace with actual diagram URL -->
 
 **Note**: This diagram is a fun and visual representation of our process, highlighting key events and the resolution of the outage.
 
