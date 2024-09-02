@@ -11,3 +11,4 @@ service { 'nginx':
   enable    => true,
   subscribe => File['/etc/nginx/nginx.conf'],
 }
+
