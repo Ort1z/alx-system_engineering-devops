@@ -8,7 +8,7 @@
 
 ## Timeline
 
-![Timeline of the Great Cookie Crumble](https://via.placeholder.com/600x200.png?text=Timeline+Diagram) <!-- Replace with actual diagram URL -->
+![Timeline of the Great Cookie Crumble](0x19-postmortem/pics/GitPhoto.png) <!-- Replace with actual diagram URL -->
 
 - **14:23 UTC**: Our monitoring system burped, alerting us that something was cooking... and not in a good way.
 - **14:25 UTC**: Our on-call engineer, Bob "Cookie Monster" Smith, received the alert while in a heated debate about chocolate chip vs. oatmeal raisin.
