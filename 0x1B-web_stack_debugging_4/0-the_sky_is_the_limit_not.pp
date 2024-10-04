@@ -12,3 +12,9 @@ service { 'nginx':
   subscribe => File['/etc/nginx/nginx.conf'],
 }
 
+worker_processes auto;
+events {
+  worker_connections 2048;
+}
+
+
